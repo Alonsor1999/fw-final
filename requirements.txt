@@ -1,0 +1,47 @@
+# Framework MVP Dependencies
+# Core Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Database & Cache
+asyncpg>=0.29.0
+redis[hiredis]>=5.0.1
+
+# Security & Validation
+python-multipart>=0.0.6
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+cryptography>=42.0.0
+
+# Monitoring & Metrics
+prometheus-client>=0.19.0
+psutil>=5.9.6
+
+# Email & OCR
+Pillow>=10.1.0
+
+# HTTP & Networking
+httpx>=0.25.2
+aiohttp>=3.9.1
+
+# Web Scraping
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Utilities
+python-dotenv>=1.0.0
+structlog>=23.2.0
+tenacity>=8.2.3
+
+# Development & Testing
+pytest>=7.4.3
+pytest-asyncio>=0.21.1
+pytest-cov>=4.1.0
+black>=23.11.0
+flake8>=6.1.0
+mypy>=1.7.1
+
+# Docker & Deployment
+docker>=6.1.3

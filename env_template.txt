@@ -1,0 +1,131 @@
+# ========================================
+# CONFIGURACIÓN DEL FRAMEWORK
+# ========================================
+
+# Configuración de Base de Datos
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=robot_framework
+DB_USER=postgres
+DB_PASSWORD=postgres
+
+# Configuración de Logging
+LOG_LEVEL=INFO
+LOG_FILE_PATH=logs/framework.log
+LOG_MAX_SIZE=10MB
+LOG_BACKUP_COUNT=5
+
+# ========================================
+# CONFIGURACIÓN DE EMAIL - GMAIL
+# ========================================
+
+# Gmail - Configuración básica
+GMAIL_EMAIL=tu_email@gmail.com
+GMAIL_PASSWORD=tu_password
+GMAIL_APP_PASSWORD=tu_app_password
+
+# Gmail - Configuración OAuth2 (opcional)
+GMAIL_CLIENT_ID=tu_client_id
+GMAIL_CLIENT_SECRET=tu_client_secret
+GMAIL_REFRESH_TOKEN=tu_refresh_token
+
+# ========================================
+# CONFIGURACIÓN DE EMAIL - OUTLOOK
+# ========================================
+
+# Outlook - Configuración básica
+OUTLOOK_EMAIL=tu_email@outlook.com
+OUTLOOK_PASSWORD=tu_password
+
+# Outlook - Configuración Microsoft Graph API (opcional)
+OUTLOOK_CLIENT_ID=tu_client_id
+OUTLOOK_CLIENT_SECRET=tu_client_secret
+OUTLOOK_TENANT_ID=tu_tenant_id
+OUTLOOK_REFRESH_TOKEN=tu_refresh_token
+
+# ========================================
+# CONFIGURACIÓN DE RABBITMQ
+# ========================================
+
+# Conexión básica
+RABBITMQ_HOST=localhost
+RABBITMQ_PORT=5672
+RABBITMQ_USERNAME=guest
+RABBITMQ_PASSWORD=guest
+RABBITMQ_VHOST=/
+
+# Configuración de canales (opcional - se auto-generan si no se especifican)
+RABBITMQ_EXCHANGE=robot_exchange
+RABBITMQ_QUEUE=robot_queue
+RABBITMQ_ROUTING_KEY=robot.routing
+
+# ========================================
+# CONFIGURACIÓN DE WEB AUTOMATION
+# ========================================
+
+# Selenium/WebDriver
+WEBDRIVER_PATH=/usr/local/bin/chromedriver
+BROWSER_HEADLESS=true
+BROWSER_TIMEOUT=30
+
+# ========================================
+# CONFIGURACIÓN DE SCRAPING
+# ========================================
+
+# Headers para requests
+USER_AGENT=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+REQUEST_TIMEOUT=30
+MAX_RETRIES=3
+
+# ========================================
+# CONFIGURACIÓN DE SEGURIDAD
+# ========================================
+
+# API Keys (si las necesitas)
+API_KEY=tu_api_key
+SECRET_KEY=tu_secret_key
+
+# ========================================
+# CONFIGURACIÓN DE MONITOREO
+# ========================================
+
+# Notificaciones
+NOTIFICATION_EMAIL=admin@tuempresa.com
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxx/yyy/zzz
+
+# Métricas
+METRICS_ENABLED=true
+METRICS_PORT=9090
+
+# ========================================
+# CONFIGURACIÓN DE DESARROLLO
+# ========================================
+
+# Entorno
+ENVIRONMENT=development
+DEBUG=true
+
+# Puerto del servidor API
+API_PORT=8000
+API_HOST=0.0.0.0
+
+# ========================================
+# INSTRUCCIONES DE USO
+# ========================================
+
+# 1. Copia este archivo como .env en el directorio raíz del proyecto
+# 2. Modifica las variables según tu configuración
+# 3. NUNCA subas este archivo al repositorio (ya está en .gitignore)
+# 4. Para producción, usa variables de entorno del sistema
+
+# Variables obligatorias para RabbitMQ:
+# - RABBITMQ_HOST: Host del servidor RabbitMQ
+# - RABBITMQ_PORT: Puerto del servidor RabbitMQ (default: 5672)
+# - RABBITMQ_USERNAME: Usuario de RabbitMQ
+# - RABBITMQ_PASSWORD: Contraseña de RabbitMQ
+
+# Variables opcionales para RabbitMQ:
+# - RABBITMQ_VHOST: Virtual host (default: /)
+# - RABBITMQ_EXCHANGE: Nombre del exchange (se auto-genera si no se especifica)
+# - RABBITMQ_QUEUE: Nombre de la queue (se auto-genera si no se especifica)
+# - RABBITMQ_ROUTING_KEY: Routing key (se auto-genera si no se especifica)
