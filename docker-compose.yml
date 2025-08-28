@@ -8,11 +8,15 @@ services:
     environment:
       - DATABASE_URL=postgresql://framework_user:framework_pass@postgres:5432/framework_db
       - REDIS_URL=redis://redis:6379/0
+      - RABBITMQ_URL=amqp://framework_user:framework_pass@rabbitmq:5672/
+      - VAULT_ADDR=http://vault:8200
       - ENVIRONMENT=production
       - LOG_LEVEL=INFO
     depends_on:
       - postgres
       - redis
+      - rabbitmq
+      - vault
     restart: unless-stopped
     volumes:
       - ./logs:/app/logs
@@ -56,6 +60,43 @@ services:
       timeout: 10s
       retries: 3
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+    ports:
+      - "5672:5672"   # Protocolo AMQP
+      - "15672:15672" # Panel de administración
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  vault:
+    image: vault:1.15
+    hostname: vault
+    cap_add:
+      - IPC_LOCK
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: root
+      VAULT_DEV_LISTEN_ADDRESS: "0.0.0.0:8200"
+    ports:
+      - "8200:8200"
+    command: server -dev -dev-root-token-id=root
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8200/v1/sys/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
 volumes:
   postgres_data:
   redis_data:
+  rabbitmq_data:

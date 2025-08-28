@@ -1,0 +1,35 @@
+[run]
+source = .
+omit =
+    */tests/*
+    */test_*
+    */__pycache__/*
+    */venv/*
+    */env/*
+    */.venv/*
+    */conftest.py
+    */pytest.ini
+    */setup.py
+    */requirements*.txt
+    */docker*
+    */Dockerfile*
+    */.git/*
+    */htmlcov/*
+    */debug_*
+    */collected_tests.txt
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    if self.debug:
+    if settings.DEBUG
+    raise AssertionError
+    raise NotImplementedError
+    if 0:
+    if __name__ == .__main__.:
+    class .*\bProtocol\):
+    @(abc\.)?abstractmethod
+
+[html]
+directory = htmlcov

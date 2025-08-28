@@ -1,0 +1,24 @@
+# Microsoft Graph API Configuration
+# Copia este archivo como .env y reemplaza los valores con tus credenciales reales
+
+# Tenant ID de tu organización de Microsoft 365
+TENANT_ID=your_tenant_id_here
+
+# Client ID de tu aplicación registrada en Azure AD
+CLIENT_ID=your_client_id_here
+
+# Client Secret de tu aplicación
+CLIENT_SECRET=your_client_secret_here
+
+# Email del usuario que accederá a los correos
+MAIL_USER=your_email@domain.com
+
+# Scope para Microsoft Graph API (no cambiar)
+GRAPH_SCOPE=https://graph.microsoft.com/.default
+
+# RabbitMQ Configuration (opcional)
+RABBITMQ_HOST=localhost
+RABBITMQ_PORT=5672
+RABBITMQ_USERNAME=guest
+RABBITMQ_PASSWORD=guest
+RABBITMQ_QUEUE=pdf_processing_queue

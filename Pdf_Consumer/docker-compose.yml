@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  pdf-consumer:
+    build: .
+    container_name: pdf-consumer
+    environment:
+      # Configuración básica
+      - TEST_MODE=${TEST_MODE:-true}
+      - AWS_REGION=${AWS_REGION:-us-east-1}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+
+      # Configuración de rutas para TEST_MODE
+      - PDF_INPUT_PATH=${PDF_INPUT_PATH:-/host/input_pdfs}
+      - JSON_OUTPUT_PATH=${JSON_OUTPUT_PATH:-/host/output_json}
+
+    # Volúmenes condicionales para TEST_MODE
+    volumes:
+      # En TEST_MODE, montar carpetas del host
+      - "C:/Users/crist/Documents/read_pdf/pdfs:/host/input_pdfs"
+      - "C:/Users/crist/Documents/read_pdf/json:/host/output_json"
+
+    restart: unless-stopped
+
+networks:
+  pdf-network:
+    driver: bridge
+
+volumes:
+  rabbitmq_data:

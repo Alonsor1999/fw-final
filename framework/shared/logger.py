@@ -224,3 +224,28 @@ class Logger:
         for directory in directories:
             if not os.path.exists(directory):
                 os.makedirs(directory)
+
+def get_logger(name: str) -> logging.Logger:
+    """
+    Función simple para obtener un logger.
+    
+    Args:
+        name: Nombre del logger
+        
+    Returns:
+        Logger configurado
+    """
+    logger = logging.getLogger(name)
+    
+    # Si el logger ya tiene handlers, no agregar más
+    if not logger.handlers:
+        # Configurar handler básico
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter(
+            '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        )
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+    
+    return logger
