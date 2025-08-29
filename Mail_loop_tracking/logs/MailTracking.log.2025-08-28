@@ -1,0 +1,1277 @@
+[2025-08-28 14:07:32] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 14:07:32] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 14:07:32] [ERROR] [config] ❌ Variables de entorno obligatorias faltantes: MAIL_USER
+[2025-08-28 14:07:32] [ERROR] [config] Por favor, verifica tu archivo .env
+[2025-08-28 14:07:32] [CRITICAL] [config] Error crítico de configuración: Variables de entorno obligatorias faltantes: MAIL_USER
+[2025-08-28 14:09:01] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 14:09:01] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 14:09:01] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 14:09:01] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 14:09:01] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 14:09:01] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 14:09:01] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 14:09:01] [DEBUG] [config] ✅ Directorio creado/verificado: c:\Proyectos_FabioAlonso\fw-final\Mail_loop_tracking\logs\attachments
+[2025-08-28 14:09:01] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 14:09:01] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 14:09:37] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 14:09:37] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 14:09:37] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 14:09:37] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 14:09:37] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 14:09:37] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 14:09:37] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 14:09:37] [DEBUG] [config] ✅ Directorio creado/verificado: C:\Proyectos_FabioAlonso\fw-final\Mail_loop_tracking\logs\attachments
+[2025-08-28 14:09:37] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 14:09:37] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 14:09:38] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 14:09:38] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 14:09:38] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 14:09:38] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 14:09:38] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 14:09:38] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 14:09:38] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 14:09:39] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 14:09:39] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 14:09:39] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 14:09:40] [WARNING] [graph_client] ⚠️ Sesión con estado inesperado: 400
+[2025-08-28 14:10:10] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 14:10:10] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 14:10:10] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 14:10:10] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 14:10:10] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 14:10:10] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 14:10:10] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 14:10:10] [DEBUG] [config] ✅ Directorio creado/verificado: C:\Proyectos_FabioAlonso\fw-final\Mail_loop_tracking\logs\attachments
+[2025-08-28 14:10:10] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 14:10:10] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 14:10:10] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 14:10:10] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 14:10:10] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 14:10:10] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 14:10:10] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 14:10:10] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 14:10:10] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 14:10:11] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 14:10:11] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 14:10:11] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 14:10:12] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 14:10:12] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 14:10:12] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 14:10:14] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 14:10:14] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 14:10:14] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 14:10:32] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 14:10:32] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 14:10:32] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 14:10:32] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 14:10:32] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 14:10:32] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 14:10:32] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 14:10:32] [DEBUG] [config] ✅ Directorio creado/verificado: c:\Proyectos_FabioAlonso\fw-final\Mail_loop_tracking\logs\attachments
+[2025-08-28 14:10:32] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 14:10:32] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 14:10:32] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 14:10:32] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 14:10:32] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 14:10:32] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 14:10:32] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 14:10:32] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 14:10:32] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 14:10:33] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 14:10:33] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 14:10:33] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 14:10:34] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 14:10:34] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 14:10:34] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 14:10:35] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 14:10:35] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 14:10:35] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 22:55:22] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 22:55:22] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 22:55:22] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 22:55:22] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 22:55:22] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 22:55:22] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 22:55:22] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 22:55:22] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 22:55:22] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 22:55:22] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 22:55:43] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 22:55:43] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 22:55:43] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 22:55:43] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 22:55:43] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 22:55:43] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 22:55:43] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 22:55:43] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 22:55:43] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 22:55:43] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 22:55:43] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 22:55:43] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 22:55:43] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 22:55:43] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 22:55:43] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 22:55:43] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 22:55:43] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 22:55:44] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 22:55:44] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 22:55:44] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 22:55:44] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 22:55:44] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 22:55:44] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 22:55:45] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 22:55:45] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 22:55:45] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 22:59:13] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 22:59:13] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 22:59:13] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 22:59:13] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 22:59:13] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 22:59:13] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 22:59:13] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 22:59:13] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 22:59:13] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 22:59:13] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 22:59:13] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 22:59:13] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 22:59:13] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 22:59:13] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 22:59:13] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 22:59:13] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 22:59:13] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 22:59:14] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 22:59:14] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 22:59:14] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 22:59:14] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 22:59:14] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 22:59:14] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 22:59:15] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 22:59:15] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 22:59:15] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 22:59:35] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 22:59:35] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 22:59:35] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 22:59:35] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 22:59:35] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 22:59:35] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 22:59:35] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 22:59:35] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 22:59:35] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 22:59:35] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 22:59:35] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 22:59:35] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 22:59:35] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 22:59:35] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 22:59:35] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 22:59:35] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 22:59:35] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 22:59:35] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 22:59:35] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 22:59:35] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 22:59:36] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 22:59:36] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 22:59:36] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 22:59:36] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 22:59:36] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 22:59:36] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:00:17] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:00:17] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:00:17] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:00:17] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:00:17] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:00:17] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:00:17] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:00:17] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:00:17] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:00:17] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:00:17] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:00:17] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:00:17] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:00:17] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:00:17] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:00:17] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:00:17] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:00:18] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:00:18] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:00:18] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:00:18] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:00:18] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:00:18] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:00:19] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:00:19] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:00:19] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:00:51] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:00:51] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:00:51] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:00:51] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:00:51] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:00:51] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:00:51] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:00:51] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:00:51] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:00:51] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:00:51] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:00:51] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:00:51] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:00:51] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:00:51] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:00:51] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:00:51] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:00:51] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:00:51] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:00:51] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:00:52] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:00:52] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:00:52] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:00:53] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:00:53] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:00:53] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:00:53] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:00:53] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:00:53] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:00:53] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:00:53] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:00:53] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:00:53] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:00:54] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:00:54] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:00:54] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:00:54] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:00:54] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:00:54] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:00:55] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:00:55] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:00:55] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:00:55] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:00:55] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:00:55] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:00:55] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:00:56] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:00:56] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:00:56] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:00:56] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:00:56] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:00:56] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:00:58] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:00:58] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 31 no leídos
+[2025-08-28 23:01:36] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:01:36] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:01:36] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:01:36] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:01:36] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:01:36] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:01:36] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:01:36] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:01:36] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:01:36] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:01:36] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:01:36] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:01:36] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:01:36] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:01:36] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:01:36] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:36] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:37] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:37] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:37] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:38] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:01:38] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:38] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:38] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:38] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:38] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:38] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:01:38] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:01:38] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:38] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:39] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:39] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:39] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:39] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:01:39] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:39] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:40] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:40] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:40] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:41] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:01:41] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:01:41] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:41] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:41] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:41] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:41] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:42] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:01:42] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:42] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:43] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:43] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:43] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:44] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:01:44] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 31 no leídos
+[2025-08-28 23:01:44] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:01:44] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:01:44] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:44] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:45] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:45] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:45] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:45] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:01:45] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:45] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:46] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:46] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:46] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:46] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:01:46] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:01:46] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:46] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:47] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:47] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:47] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:47] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:01:47] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:01:47] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:01:48] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:01:48] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:01:48] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:01:49] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:01:49] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 31 no leídos
+[2025-08-28 23:06:49] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:06:49] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:06:49] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:06:49] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:06:50] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:06:50] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:06:50] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:06:50] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:06:50] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:06:50] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:06:51] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:06:51] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:06:51] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:06:51] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:06:51] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:06:51] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:06:51] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:06:52] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:06:52] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:06:52] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:06:53] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:06:53] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:06:53] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:06:53] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:06:53] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:06:53] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:06:55] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:06:55] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 30 no leídos
+[2025-08-28 23:08:08] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:08:08] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:08:08] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:08:08] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:08:08] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:08:08] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:08:08] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:08:08] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:08:08] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:08:08] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:08:09] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:08:09] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:08:09] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:08:09] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:08:09] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:08:09] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:09] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:09] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:09] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:09] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:10] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:08:10] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:10] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:10] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:10] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:10] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:10] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:08:10] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:08:10] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:10] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:11] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:11] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:11] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:11] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:08:11] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:11] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:12] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:12] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:12] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:12] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:08:12] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:08:12] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:12] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:13] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:13] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:13] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:14] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:08:14] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:14] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:14] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:14] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:14] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:16] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:08:16] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 30 no leídos
+[2025-08-28 23:08:16] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:08:16] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:08:16] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:16] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:17] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:17] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:17] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:17] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:08:17] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:17] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:18] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:18] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:18] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:18] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:08:18] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:08:18] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:18] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:19] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:19] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:19] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:19] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:08:19] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:08:19] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:08:20] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:08:20] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:08:20] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:08:21] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:08:21] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 30 no leídos
+[2025-08-28 23:10:25] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:10:25] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:10:25] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:10:25] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:10:25] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:10:25] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:10:25] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:10:25] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:10:25] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:10:25] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:10:25] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:10:25] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:10:25] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:10:25] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:10:25] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:10:25] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:25] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:26] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:26] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:26] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:26] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:10:26] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:26] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:27] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:27] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:27] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:27] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:10:27] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:10:27] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:27] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:28] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:28] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:28] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:28] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:10:28] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:28] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:28] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:28] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:28] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:29] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:10:29] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:10:29] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:29] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:29] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:29] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:29] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:30] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:10:30] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:30] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:30] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:30] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:30] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:32] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:10:32] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 30 no leídos
+[2025-08-28 23:10:32] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:10:32] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:10:32] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:32] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:32] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:32] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:32] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:33] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:10:33] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:33] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:33] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:33] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:33] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:33] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:10:33] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:10:33] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:33] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:34] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:34] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:34] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:34] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:10:34] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:34] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:35] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:35] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:35] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:36] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:10:36] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 30 no leídos
+[2025-08-28 23:10:46] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:10:46] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:10:46] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:46] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:47] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:47] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:47] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:47] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:10:47] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:47] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:48] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:48] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:48] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:48] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:10:48] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:10:48] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:48] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:49] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:49] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:49] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:49] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:10:49] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:10:49] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:10:50] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:10:50] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:10:50] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:10:51] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:10:51] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 30 no leídos
+[2025-08-28 23:11:01] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:11:01] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:11:01] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:11:01] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:11:01] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:11:01] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:11:01] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:11:02] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:11:02] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:11:02] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:11:02] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:11:02] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:11:02] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:11:03] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:11:03] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:11:03] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:11:03] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:11:03] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:11:03] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:11:03] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:11:04] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:11:04] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:11:04] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:11:04] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:11:04] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:11:04] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:11:05] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:11:05] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 30 no leídos
+[2025-08-28 23:11:15] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:11:15] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:11:15] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:11:15] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:11:16] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:11:16] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:11:16] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:11:16] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:11:16] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:11:16] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:11:17] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:11:17] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:11:17] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:11:17] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:11:17] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:11:17] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:11:17] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:11:18] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:11:18] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:11:18] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:11:18] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:11:18] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:11:18] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:11:19] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:11:19] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:11:19] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:14:37] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:14:37] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:14:37] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:14:37] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:14:37] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:14:37] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:14:37] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:14:37] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:14:37] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:14:37] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:14:37] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:14:37] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:14:37] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:14:37] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:14:37] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:14:37] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:14:37] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:14:38] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:14:38] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:14:38] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:14:38] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:14:38] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:14:38] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:14:39] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:14:39] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:14:39] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:14:39] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:14:39] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:14:39] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:14:39] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:14:39] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:14:39] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:14:39] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:14:40] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:14:40] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:14:40] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:14:40] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:14:40] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:14:40] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:14:41] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:14:41] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:14:41] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:14:41] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:14:41] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:14:41] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:14:41] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:14:42] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:14:42] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:14:42] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:14:42] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:14:42] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:14:42] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:14:43] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:14:43] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 30 no leídos
+[2025-08-28 23:14:43] [INFO] [folder_reader] Obteniendo 10 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:14:43] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:14:43] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:14:43] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:14:44] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:14:44] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:14:44] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:14:44] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:14:44] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:14:44] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:14:45] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:14:45] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:14:45] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:14:45] [INFO] [folder_reader] ✅ 10 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:20:41] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:20:41] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:20:41] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:20:41] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:20:41] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:20:41] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:20:41] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:20:41] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:20:41] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:20:41] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:20:41] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:20:41] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:20:41] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:20:41] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:20:41] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:20:41] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:41] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:41] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:41] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:41] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:42] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:20:42] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:42] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:43] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:43] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:43] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:43] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:20:43] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:20:43] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:43] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:43] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:43] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:43] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:44] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:20:44] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:44] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:44] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:44] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:44] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:45] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:20:45] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:20:45] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:45] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:45] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:45] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:45] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:46] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:20:46] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:46] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:47] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:47] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:47] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:48] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:20:48] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:20:48] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:20:48] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:20:48] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:48] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:48] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:48] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:48] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:49] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:20:49] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:49] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:50] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:50] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:50] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:50] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:20:50] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:20:50] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:50] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:51] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:51] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:51] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:51] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:20:51] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:20:51] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:20:52] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:20:52] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:20:52] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:20:53] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:20:53] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:21:03] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:03] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:21:03] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:03] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:04] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:04] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:04] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:04] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:21:04] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:04] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:05] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:05] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:05] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:05] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:05] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:21:05] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:05] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:06] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:06] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:06] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:06] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:21:06] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:06] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:07] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:07] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:07] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:08] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:08] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:21:18] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:18] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:21:18] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:18] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:19] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:19] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:19] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:19] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:21:19] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:19] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:20] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:20] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:20] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:20] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:20] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:21:20] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:20] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:21] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:21] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:21] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:21] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:21:21] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:21] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:22] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:22] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:22] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:23] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:23] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:21:33] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:33] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:21:33] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:33] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:34] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:34] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:34] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:34] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:21:34] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:34] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:35] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:35] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:35] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:35] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:35] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:21:35] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:35] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:36] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:36] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:36] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:36] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:21:36] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:36] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:37] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:37] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:37] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:38] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:38] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:21:48] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:48] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:21:48] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:48] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:49] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:49] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:49] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:49] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:21:49] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:49] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:50] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:50] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:50] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:50] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:50] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:21:50] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:50] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:51] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:51] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:51] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:51] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:21:51] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:21:51] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:21:52] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:21:52] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:21:52] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:21:53] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:21:53] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:22:44] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:22:44] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:22:44] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:22:44] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:22:44] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:22:44] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:22:44] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:22:44] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:22:44] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:22:44] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:22:44] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:22:44] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:22:44] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:22:44] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:22:44] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:22:44] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:44] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:45] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:45] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:45] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:45] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:22:45] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:45] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:46] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:46] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:46] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:46] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:22:46] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:22:46] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:46] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:47] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:47] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:47] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:47] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:22:47] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:47] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:48] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:48] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:48] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:48] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:22:48] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:22:48] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:48] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:49] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:49] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:49] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:49] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:22:49] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:49] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:50] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:50] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:50] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:51] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:22:51] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:22:51] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:22:51] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:22:51] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:51] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:52] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:52] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:52] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:52] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:22:52] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:52] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:53] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:53] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:53] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:53] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:22:53] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:22:53] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:53] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:54] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:54] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:54] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:54] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:22:54] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:22:54] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:22:55] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:22:55] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:22:55] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:22:56] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:22:56] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:23:06] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:23:06] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:23:06] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:06] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:07] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:07] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:07] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:07] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:23:07] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:07] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:08] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:08] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:08] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:08] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:23:08] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:23:08] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:08] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:09] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:09] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:09] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:09] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:23:09] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:09] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:10] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:10] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:10] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:11] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:23:11] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:23:21] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:23:21] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:23:21] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:21] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:22] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:22] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:22] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:22] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:23:22] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:22] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:23] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:23] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:23] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:23] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:23:23] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:23:23] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:23] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:24] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:24] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:24] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:24] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:23:24] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:24] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:25] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:25] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:25] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:26] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:23:26] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:23:36] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:23:36] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:23:36] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:36] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:37] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:37] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:37] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:37] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:23:37] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:37] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:38] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:38] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:38] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:38] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:23:38] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:23:38] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:38] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:39] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:39] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:39] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:39] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:23:39] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:23:39] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:23:40] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:23:40] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:23:40] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:23:41] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:23:41] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:24:30] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:24:30] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:24:30] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:24:30] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:24:30] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:24:30] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:24:30] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:24:30] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:24:30] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:24:30] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:24:30] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:24:30] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:24:30] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:24:30] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:24:30] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:24:30] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:30] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:31] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:31] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:31] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:31] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:24:31] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:31] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:32] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:32] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:32] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:32] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:24:32] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:24:32] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:32] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:32] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:32] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:32] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:33] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:24:33] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:33] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:34] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:34] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:34] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:34] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:24:34] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:24:34] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:34] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:35] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:35] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:35] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:35] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:24:35] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:35] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:36] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:36] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:36] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:37] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:24:37] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:24:37] [INFO] [folder_reader] Obteniendo 100 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:24:37] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:24:37] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:37] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:38] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:38] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:38] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:38] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:24:38] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:38] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:39] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:39] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:39] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:40] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:24:42] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:24:42] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:24:42] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:42] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:43] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:43] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:43] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:43] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:24:43] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:43] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:44] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:44] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:44] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:44] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:24:44] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:24:44] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:44] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:45] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:45] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:45] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:45] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:24:45] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:45] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:46] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:46] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:46] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:47] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:24:47] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:24:57] [INFO] [folder_reader] Obteniendo 100 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:24:57] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:24:57] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:57] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:58] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:58] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:58] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:24:58] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:24:58] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:24:58] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:24:59] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:24:59] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:24:59] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:00] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:00] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:00] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:25:00] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:00] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:01] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:01] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:01] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:01] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:25:01] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:01] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:02] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:02] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:02] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:02] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:02] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:25:02] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:02] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:03] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:03] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:03] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:03] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:25:03] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:03] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:04] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:04] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:04] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:05] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:05] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:25:15] [INFO] [folder_reader] Obteniendo 100 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:15] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:25:15] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:15] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:16] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:16] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:16] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:16] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:25:16] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:16] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:17] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:17] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:17] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:18] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:18] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:18] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:25:18] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:18] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:19] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:19] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:19] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:19] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:25:19] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:19] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:20] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:20] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:20] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:21] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:21] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:25:21] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:21] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:21] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:21] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:21] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:22] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:25:22] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:22] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:22] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:22] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:22] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:23] [INFO] [folder_reader] ✅ 44 mensajes obtenidos de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:23] [INFO] [folder_reader] ✅ Resumen de 'Iniciativa4': 44 mensajes, 2 no leídos
+[2025-08-28 23:25:33] [INFO] [folder_reader] Obteniendo 100 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:25:33] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:25:33] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:33] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:34] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:34] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:34] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:25:34] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:25:34] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:25:34] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:25:35] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:25:35] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:25:35] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:27:29] [DEBUG] [config] Archivo .env cargado correctamente
+[2025-08-28 23:27:29] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:27:29] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:27:29] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:27:29] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:27:29] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:27:29] [INFO] [config] Creando directorios necesarios...
+[2025-08-28 23:27:29] [DEBUG] [config] ✅ Directorio creado/verificado: /Users/carlitos/Downloads/fw-final/Mail_loop_tracking/logs/attachments
+[2025-08-28 23:27:29] [DEBUG] [config] ✅ Directorio creado/verificado: logs
+[2025-08-28 23:27:29] [DEBUG] [config] ✅ Directorio creado/verificado: credentials
+[2025-08-28 23:27:29] [INFO] [config] Iniciando validación de configuración...
+[2025-08-28 23:27:29] [INFO] [config] ✅ Configuración validada correctamente
+[2025-08-28 23:27:29] [DEBUG] [config] Usuario configurado: revisiontutelas@registraduria.gov.co
+[2025-08-28 23:27:29] [DEBUG] [config] Tenant ID: e85898d3-def4-4865-9ca5-9af5c03da9f9
+[2025-08-28 23:27:29] [DEBUG] [config] Graph API Endpoint: https://graph.microsoft.com/v1.0
+[2025-08-28 23:27:29] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:27:29] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:27:30] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:27:30] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:27:30] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:27:30] [WARNING] [graph_client] ⚠️ Sesión válida pero sin permisos suficientes
+[2025-08-28 23:27:30] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:27:30] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:27:31] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:27:31] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:27:31] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:27:31] [INFO] [folder_reader] Generando resumen de la carpeta 'Iniciativa4'
+[2025-08-28 23:27:31] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:27:31] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:27:31] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:27:31] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:27:31] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:27:31] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:27:32] [INFO] [folder_reader] ✅ Carpeta 'Iniciativa4' encontrada con ID: AAMkADdkYTAzMGFiLWI1NGMtNDVkMi04NjE0LWRlZjk2Yzk5ZmFmMQAuAAAAAADSl5258CUrTpJhv195RU5JAQAjMwqF3aAXTZRuHD3hHJieAAAMx89XAAA=
+[2025-08-28 23:27:32] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:27:32] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:27:32] [INFO] [graph_client] ✅ Token obtenido exitosamente.
+[2025-08-28 23:27:32] [DEBUG] [graph_client] Token expira en: 3599 segundos
+[2025-08-28 23:27:32] [INFO] [graph_client] ✅ Sesión autenticada preparada correctamente.
+[2025-08-28 23:27:33] [INFO] [folder_reader] Obteniendo 1000 mensajes de la carpeta 'Iniciativa4'
+[2025-08-28 23:27:33] [INFO] [folder_reader] Buscando carpeta: Iniciativa4
+[2025-08-28 23:27:33] [DEBUG] [graph_client] Preparando sesión autenticada para llamadas a Microsoft Graph.
+[2025-08-28 23:27:33] [DEBUG] [graph_client] Iniciando autenticación con MSAL.
+[2025-08-28 23:27:33] [WARNING] [retry_utils] ⚠️ Intento 1/4 falló en get_token: Error de Microsoft Graph API: module 'msal' has no attribute 'MsalException'. Reintentando en 2.00s...

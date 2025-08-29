@@ -57,7 +57,7 @@ class AttachmentDownloader:
     
     def download_attachment(self, attachment: Dict, message_info: Dict) -> Optional[str]:
         """
-        Descargar un adjunto específico
+        Descargar un adjunto específico - VERSIÓN SIMPLIFICADA Y RÁPIDA
         
         Args:
             attachment: Información del adjunto
@@ -71,30 +71,24 @@ class AttachmentDownloader:
             attachment_name = attachment.get("name", "unknown")
             content_type = attachment.get("contentType", "")
             
-            # Crear nombre de archivo único
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            message_subject = message_info.get("subject", "unknown").replace(" ", "_")[:30]
+            # Crear nombre de archivo simple y único
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")[:-3]  # Incluir milisegundos
             sender = message_info.get("sender", "unknown").split("@")[0]
             
-            # Limpiar nombre de archivo
-            safe_name = "".join(c for c in attachment_name if c.isalnum() or c in "._-")
-            file_extension = Path(attachment_name).suffix
+            # Obtener extensión del archivo original
+            original_extension = Path(attachment_name).suffix
+            if not original_extension and "pdf" in content_type.lower():
+                original_extension = ".pdf"
+            elif not original_extension:
+                original_extension = ".bin"
             
-            # Crear nombre final
-            final_name = f"{timestamp}_{sender}_{message_subject}_{safe_name}"
-            if not file_extension and content_type:
-                # Intentar inferir extensión del content type
-                if "pdf" in content_type.lower():
-                    file_extension = ".pdf"
-                elif "word" in content_type.lower():
-                    file_extension = ".docx"
-                elif "excel" in content_type.lower():
-                    file_extension = ".xlsx"
-                elif "image" in content_type.lower():
-                    file_extension = ".jpg"
+            # Crear nombre final simple
+            safe_name = "".join(c for c in attachment_name if c.isalnum() or c in "._-")[:50]
+            final_name = f"{timestamp}_{sender}_{safe_name}"
             
-            if file_extension:
-                final_name += file_extension
+            # Asegurar que tenga extensión
+            if not final_name.endswith(original_extension):
+                final_name += original_extension
             
             # Crear ruta completa
             file_path = self.download_dir / final_name
@@ -103,14 +97,28 @@ class AttachmentDownloader:
             if attachment.get("@odata.type") == "#microsoft.graph.fileAttachment":
                 # Adjunto de archivo
                 content_url = f"{GRAPH_API_ENDPOINT}/users/{MAIL_USER}/messages/{message_info['id']}/attachments/{attachment_id}/$value"
+                
+                logger.debug(f"🔗 Descargando: {attachment_name} -> {final_name}")
                 response = self.session.get(content_url)
                 
-                if response.ok:
-                    with open(file_path, 'wb') as f:
-                        f.write(response.content)
-                    
-                    logger.info(f"✅ Adjunto descargado: {file_path.name} ({len(response.content)} bytes)")
-                    return str(file_path.absolute())
+                if response.ok and response.content:
+                    # Escribir archivo de forma segura
+                    try:
+                        with open(file_path, 'wb') as f:
+                            f.write(response.content)
+                            f.flush()  # Forzar escritura
+                        
+                        # Verificar que se escribió correctamente
+                        if file_path.exists() and file_path.stat().st_size > 0:
+                            logger.info(f"✅ Adjunto descargado: {final_name} ({len(response.content)} bytes)")
+                            return str(file_path.absolute())
+                        else:
+                            logger.error(f"❌ Archivo creado pero vacío: {final_name}")
+                            return None
+                            
+                    except Exception as write_error:
+                        logger.error(f"❌ Error escribiendo archivo {final_name}: {write_error}")
+                        return None
                 else:
                     logger.error(f"❌ Error descargando adjunto {attachment_name}: {response.status_code}")
                     return None
@@ -130,7 +138,7 @@ class AttachmentDownloader:
     
     def download_message_attachments(self, message: Dict) -> List[str]:
         """
-        Descargar todos los adjuntos de un mensaje
+        Descargar todos los adjuntos de un mensaje - VERSIÓN RÁPIDA
         
         Args:
             message: Mensaje de correo

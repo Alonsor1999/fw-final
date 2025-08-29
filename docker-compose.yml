@@ -1,4 +1,4 @@
-version: '3.8'
+# version: '3.8'  # Obsoleto en versiones recientes de Docker Compose
 
 services:
   framework-app:
@@ -79,7 +79,7 @@ services:
       retries: 3
 
   vault:
-    image: vault:1.15
+    image: hashicorp/vault:latest
     hostname: vault
     cap_add:
       - IPC_LOCK

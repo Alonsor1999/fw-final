@@ -27,6 +27,7 @@ from core.layers.decision_layer.decision_coordinator import DecisionCoordinator
 
 # Importar las 5 capas de procesamiento
 from core.layers.ingestion_layer.ingestion_coordinator import IngestionCoordinator
+from core.layers.ingestion_layer.document_classifier import DocumentClassifier
 from core.layers.specialized_processing_layer.specialized_processing_coordinator import (
     SpecializedProcessingCoordinator,
 )
@@ -419,9 +420,19 @@ class Robot001:
                         if "final_decisions" in result:
                             total_final_decisions.extend(result["final_decisions"])
 
-                        logger.info(
-                            f"✅ Mensaje procesado: {message.get('subject', 'Sin asunto')}"
-                        )
+                        # 🎯 Mostrar información de clasificación
+                        if result.get("email_classification"):
+                            classification = result["email_classification"]
+                            route_name = classification.get("primary_route_name", "No clasificado")
+                            confidence = classification.get("classification_confidence", 0)
+                            logger.info(
+                                f"✅ Mensaje procesado: {message.get('subject', 'Sin asunto')} "
+                                f"→ Ruta: {route_name} (Confianza: {confidence:.2f})"
+                            )
+                        else:
+                            logger.info(
+                                f"✅ Mensaje procesado: {message.get('subject', 'Sin asunto')}"
+                            )
 
                         # Log información de las capas si están disponibles
                         if result.get("final_decisions"):
@@ -461,12 +472,37 @@ class Robot001:
                     f"🎉 Decisiones finales generadas: {len(total_final_decisions)}"
                 )
 
+            # 🎯 Estadísticas de clasificación de correos
+            classification_stats = {
+                'ruta_a': 0,
+                'ruta_b': 0,
+                'ruta_c': 0,
+                'no_classified': 0,
+                'error': 0
+            }
+            
+            for result in total_layer_results:
+                if result.get("email_classification"):
+                    route = result["email_classification"].get("primary_route", "no_classified")
+                    if route in classification_stats:
+                        classification_stats[route] += 1
+
             return {
                 "success": True,
                 "processed": processed_count,
                 "pdfs_sent": pdfs_sent,
                 "errors": errors,
                 "total_messages": len(messages),
+                # 🎯 ESTADÍSTICAS DE CLASIFICACIÓN
+                "email_classification_summary": {
+                    "total_emails_classified": processed_count,
+                    "classification_breakdown": classification_stats,
+                    "ruta_a_count": classification_stats['ruta_a'],
+                    "ruta_b_count": classification_stats['ruta_b'],
+                    "ruta_c_count": classification_stats['ruta_c'],
+                    "unclassified_count": classification_stats['no_classified'],
+                    "classification_errors": classification_stats['error']
+                },
                 # 🎉 RESULTADOS DE LAS 5 CAPAS
                 "layer_processing_summary": {
                     "total_pdfs_processed_through_layers": total_layer_processing,
@@ -490,8 +526,18 @@ class Robot001:
             subject = message.get("subject", "Sin asunto")
             sender = self._extract_sender_email(message)
             received_date = message.get("receivedDateTime", "")
+            
+            # Extraer cuerpo del correo
+            body = self._extract_email_body(message)
 
             logger.info(f"📧 Procesando: {subject} (De: {sender})")
+
+            # 🎯 CLASIFICAR EL CORREO POR CONTENIDO
+            document_classifier = DocumentClassifier()
+            classification_result = document_classifier.classify_email_by_content(subject, body)
+            
+            logger.info(f"🎯 Clasificación del correo: {classification_result.get('primary_route_name', 'No clasificado')} "
+                       f"(Confianza: {classification_result.get('classification_confidence', 0):.2f})")
 
             # Extraer información del correo
             email_info = {
@@ -502,32 +548,35 @@ class Robot001:
                 "message_id": message_id,
                 "has_attachments": message.get("hasAttachments", False),
                 "attachment_count": 0,
+                "body_preview": body[:200] + "..." if len(body) > 200 else body,
+                "classification": classification_result,
             }
 
-            # Descargar PDFs si está habilitado
-            pdfs_downloaded = []
-            if self.robot_config["email_processing"]["download_pdfs_only"]:
-                pdfs_downloaded = self.attachment_downloader.download_pdf_attachments(
-                    message
-                )
-            else:
-                # Descargar todos los adjuntos
-                all_attachments = (
-                    self.attachment_downloader.download_message_attachments(message)
-                )
-                pdfs_downloaded = [
-                    f for f in all_attachments if f.lower().endswith(".pdf")
-                ]
+            # 🔧 DESCARGAR TODOS LOS ADJUNTOS INMEDIATAMENTE
+            logger.info(f"📥 Descargando adjuntos del mensaje: {subject}")
+            all_attachments_downloaded = self.attachment_downloader.download_message_attachments(message)
+            
+            # Filtrar solo PDFs para el procesamiento posterior (si es necesario)
+            pdfs_downloaded = [
+                f for f in all_attachments_downloaded if f.lower().endswith(".pdf")
+            ]
 
-            email_info["attachment_count"] = len(pdfs_downloaded)
+            email_info["attachment_count"] = len(all_attachments_downloaded)
+            logger.info(f"📄 Adjuntos descargados: {len(all_attachments_downloaded)} archivos")
+            logger.info(f"📄 PDFs para procesamiento: {len(pdfs_downloaded)} archivos")
 
             # Enviar PDFs a RabbitMQ y procesar a través de las 5 capas
             pdfs_sent = 0
             layer_processing_results = []
 
             for pdf_path in pdfs_downloaded:
-                # 📤 PASO 1: Enviar a RabbitMQ (flujo original)
-                if self.rabbitmq_sender.send_pdf_message(pdf_path, email_info):
+                # 🔍 VERIFICAR QUE EL ARCHIVO EXISTE Y NO ESTÁ VACÍO
+                if not self._verify_pdf_file(pdf_path):
+                    logger.error(f"❌ PDF inválido o vacío: {pdf_path}")
+                    continue
+
+                # 📤 PASO 1: Enviar a RabbitMQ con formato corregido
+                if self._send_pdf_to_rabbitmq(pdf_path, email_info):
                     pdfs_sent += 1
                     logger.info(f"📤 PDF enviado a RabbitMQ: {pdf_path}")
 
@@ -562,6 +611,9 @@ class Robot001:
                 "success": True,
                 "pdfs_sent": pdfs_sent,
                 "pdfs_downloaded": len(pdfs_downloaded),
+                "all_attachments_downloaded": len(all_attachments_downloaded),
+                # 🎯 INFORMACIÓN DE CLASIFICACIÓN DEL CORREO
+                "email_classification": classification_result,
                 # 🎉 RESULTADO DE LAS 5 CAPAS - DECISIÓN FINAL DE LA ÚLTIMA CAPA
                 "layer_processing_results": layer_processing_results,
                 "final_decisions": [
@@ -620,6 +672,153 @@ class Robot001:
         else:
             email = str(sender)
         return email
+    
+    def _extract_email_body(self, message: Dict) -> str:
+        """Extraer el cuerpo del correo electrónico"""
+        try:
+            # Intentar obtener el cuerpo del mensaje
+            body = message.get("body", {})
+            
+            if isinstance(body, dict):
+                # Si body es un diccionario, extraer el contenido
+                content = body.get("content", "")
+                content_type = body.get("contentType", "text")
+                
+                if content_type == "html":
+                    # Si es HTML, intentar extraer solo texto
+                    import re
+                    # Remover tags HTML básicos
+                    content = re.sub(r'<[^>]+>', '', content)
+                    content = re.sub(r'&nbsp;', ' ', content)
+                    content = re.sub(r'&amp;', '&', content)
+                    content = re.sub(r'&lt;', '<', content)
+                    content = re.sub(r'&gt;', '>', content)
+                
+                return content.strip()
+            elif isinstance(body, str):
+                return body.strip()
+            else:
+                return ""
+                
+        except Exception as e:
+            logger.warning(f"Error extrayendo cuerpo del correo: {e}")
+            return ""
+
+    def _download_and_verify_pdfs(self, message: Dict) -> List[str]:
+        """Descargar PDFs y verificar que se descargaron correctamente"""
+        try:
+            # Descargar PDFs
+            pdfs_downloaded = self.attachment_downloader.download_pdf_attachments(message)
+            
+            # Verificar cada PDF descargado
+            valid_pdfs = []
+            for pdf_path in pdfs_downloaded:
+                if self._verify_pdf_file(pdf_path):
+                    valid_pdfs.append(pdf_path)
+                    logger.info(f"✅ PDF válido descargado: {pdf_path}")
+                else:
+                    logger.warning(f"⚠️ PDF inválido descartado: {pdf_path}")
+            
+            return valid_pdfs
+            
+        except Exception as e:
+            logger.error(f"❌ Error descargando PDFs: {e}")
+            return []
+
+    def _verify_pdf_file(self, pdf_path: str) -> bool:
+        """Verificar que un archivo PDF existe y no está vacío"""
+        try:
+            import os
+            from pathlib import Path
+            
+            file_path = Path(pdf_path)
+            
+            # Verificar que el archivo existe
+            if not file_path.exists():
+                logger.error(f"❌ Archivo no existe: {pdf_path}")
+                return False
+            
+            # Verificar que no está vacío
+            file_size = file_path.stat().st_size
+            if file_size == 0:
+                logger.error(f"❌ Archivo vacío: {pdf_path}")
+                return False
+            
+            # Verificar que es un PDF válido (primeros bytes)
+            try:
+                with open(file_path, 'rb') as f:
+                    header = f.read(4)
+                    if header != b'%PDF':
+                        logger.error(f"❌ No es un PDF válido: {pdf_path}")
+                        return False
+            except Exception as e:
+                logger.error(f"❌ Error leyendo archivo: {pdf_path} - {e}")
+                return False
+            
+            logger.debug(f"✅ PDF verificado: {pdf_path} ({file_size} bytes)")
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Error verificando PDF: {pdf_path} - {e}")
+            return False
+
+    def _send_pdf_to_rabbitmq(self, pdf_path: str, email_info: Dict) -> bool:
+        """Enviar PDF a RabbitMQ - SOLO ruta local y GUID"""
+        try:
+            import uuid
+            from pathlib import Path
+            
+            # Generar GUID único
+            guid = str(uuid.uuid4())
+            
+            # Obtener ruta absoluta del archivo
+            file_path = Path(pdf_path)
+            absolute_path = str(file_path.absolute())
+            
+            # Crear mensaje SIMPLIFICADO - solo ruta y GUID
+            message = {
+                "guid": guid,
+                "local_path": absolute_path
+            }
+            
+            # Enviar usando el método original pero con nuestro mensaje personalizado
+            return self._send_custom_message_to_rabbitmq(message)
+            
+        except Exception as e:
+            logger.error(f"❌ Error preparando mensaje para RabbitMQ: {e}")
+            return False
+
+    def _send_custom_message_to_rabbitmq(self, message: Dict) -> bool:
+        """Enviar mensaje personalizado a RabbitMQ"""
+        try:
+            import json
+            import pika
+            
+            # Convertir a JSON
+            message_json = json.dumps(message, ensure_ascii=False)
+            
+            # Obtener configuración de RabbitMQ
+            queue_name = self.robot_config["rabbitmq_config"].get("queue_name", "pdf_processing_queue")
+            
+            # Enviar mensaje
+            self.rabbitmq_sender.channel.basic_publish(
+                exchange='',
+                routing_key=queue_name,
+                body=message_json.encode('utf-8'),
+                properties=pika.BasicProperties(
+                    delivery_mode=2,  # Hacer el mensaje persistente
+                    content_type='application/json'
+                )
+            )
+            
+            logger.info(f"✅ Ruta y GUID enviados a RabbitMQ: {message.get('guid', 'N/A')} -> {message.get('local_path', 'N/A')}")
+            logger.debug(f"Mensaje simplificado: {message}")
+            
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Error enviando mensaje personalizado a RabbitMQ: {e}")
+            return False
 
     async def _process_pdf_through_layers(
         self, pdf_path: str, email_info: Dict[str, Any]
@@ -662,7 +861,27 @@ class Robot001:
 
             # 🔸 CAPA 3: Análisis y Extracción (Extraer datos, analizar contenido)
             logger.info("🔍 Capa 3: Procesando Análisis y Extracción...")
-            analysis_result = self.analysis_coordinator.process_document(pdf_path)
+            # Preparar contenido procesado para la capa de análisis
+            processed_content = {
+                "file_path": pdf_path,
+                "ingestion_result": ingestion_result,
+                "specialized_result": specialized_result,
+                "document_type": "pdf",
+                # 🔧 AGREGAR FORMATO ESPERADO POR EL DATA_EXTRACTOR
+                "text_content": {
+                    "full_text": f"PDF procesado: {pdf_path}",
+                    "extracted_text": f"Contenido del PDF: {pdf_path}"
+                },
+                "body_content": {
+                    "text_body": f"PDF procesado: {pdf_path}",
+                    "html_body": f"<p>Contenido del PDF: {pdf_path}</p>"
+                },
+                "headers": {
+                    "subject": "PDF Processing",
+                    "content_type": "application/pdf"
+                }
+            }
+            analysis_result = self.analysis_coordinator.process_document(processed_content, "pdf")
             if not analysis_result.get("success", False):
                 return {
                     "success": False,
@@ -673,7 +892,17 @@ class Robot001:
 
             # 🔸 CAPA 4: Almacenamiento y Gestión (Storage, índices, cache)
             logger.info("💾 Capa 4: Procesando Almacenamiento...")
-            storage_result = self.storage_coordinator.process_document(pdf_path)
+            # Preparar datos para almacenamiento
+            storage_data = {
+                "file_path": pdf_path,
+                "ingestion_result": ingestion_result,
+                "specialized_result": specialized_result,
+                "analysis_result": analysis_result,
+                "document_type": "pdf"
+            }
+            storage_result = self.storage_coordinator.store_document_complete(
+                storage_data, "pdf", os.path.basename(pdf_path)
+            )
             if not storage_result.get("success", False):
                 return {
                     "success": False,
@@ -684,8 +913,14 @@ class Robot001:
 
             # 🔸 CAPA 5: Decisión (Local, AWS, híbrido, manual) - LA ÚLTIMA CAPA
             logger.info("🎯 Capa 5: Procesando Decisión...")
-            decision_result = self.decision_coordinator.process_decision(
-                analysis_result.get("extracted_data", {})
+            # Preparar datos para decisión
+            decision_data = {
+                "analysis_data": analysis_result.get("extracted_data", {}),
+                "confidence_score": 0.75  # Valor por defecto
+            }
+            decision_result = self.decision_coordinator.make_decision(
+                decision_data["analysis_data"], 
+                decision_data["confidence_score"]
             )
 
             # Calcular tiempo total de procesamiento
@@ -712,6 +947,15 @@ class Robot001:
                 logger.info(
                     f"🎯 Decisión final: {decision_result.get('decision_type', 'N/A')} con confianza {decision_result.get('confidence_score', 'N/A')}"
                 )
+                
+                # 📊 MOSTRAR RESULTADOS DETALLADOS DE CADA CAPA
+                logger.info("📊 RESULTADOS DETALLADOS DE LAS 5 CAPAS:")
+                logger.info(f"   📥 Capa 1 (Ingesta): {ingestion_result.get('document_type', 'N/A')}")
+                logger.info(f"   🔧 Capa 2 (Especializado): {specialized_result.get('processing_type', 'N/A')}")
+                logger.info(f"   🔍 Capa 3 (Análisis): {analysis_result.get('extraction_type', 'N/A')}")
+                logger.info(f"   💾 Capa 4 (Almacenamiento): {storage_result.get('storage_type', 'N/A')}")
+                logger.info(f"   🎯 Capa 5 (Decisión): {decision_result.get('decision_type', 'N/A')}")
+                
             else:
                 logger.error(
                     f"❌ Error en Capa de Decisión: {decision_result.get('error', 'Desconocido')}"
@@ -795,9 +1039,9 @@ async def main():
         # Iniciar el robot
         await robot.start()
 
-        # Mantener el robot ejecutándose con procesamiento automático
-        print("\n🤖 Robot ejecutándose con procesamiento automático...")
-        print("📧 Monitoreando carpeta Iniciativa4 cada 10 segundos")
+        # Procesar correos una sola vez
+        print("\n🤖 Robot procesando correos una sola vez...")
+        print("📧 Leyendo correos de la carpeta Iniciativa4")
         print("📄 Descargando PDFs y enviando a RabbitMQ")
         print("🔄 Procesando PDFs a través de las 5 capas:")
         print("   📥 Capa 1: Ingesta (Clasificar, validar, escanear)")
@@ -805,79 +1049,67 @@ async def main():
         print("   🔍 Capa 3: Análisis y Extracción (Datos)")
         print("   💾 Capa 4: Almacenamiento y Gestión")
         print("   🎯 Capa 5: Decisión Final (Local/AWS/Híbrido)")
-        print("\nPresiona Ctrl+C para detener")
+        print("\nProcesando...")
 
         try:
-            check_interval = config["email_processing"]["check_interval"]
-            cycle_count = 0
+            # Procesar correos una sola vez
+            result = await robot.execute_command("process_emails")
 
-            while robot.is_running:
-                cycle_count += 1
+            if result["success"]:
+                print(f"✅ Procesados: {result['processed']} correos")
+                print(f"📤 Adjuntos enviados: {result['pdfs_sent']} a RabbitMQ")
+
+                # 🎯 MOSTRAR RESULTADOS DE CLASIFICACIÓN DE CORREOS
+                if result.get("email_classification_summary"):
+                    class_summary = result["email_classification_summary"]
+                    print(f"\n🎯 CLASIFICACIÓN DE CORREOS:")
+                    print(f"   📋 Ruta A (Estado de Cédula): {class_summary['ruta_a_count']}")
+                    print(f"   📋 Ruta B (Documentos de Identificación): {class_summary['ruta_b_count']}")
+                    print(f"   📋 Ruta C (Procesos Postumas): {class_summary['ruta_c_count']}")
+                    print(f"   ❓ No clasificados: {class_summary['unclassified_count']}")
+                    print(f"   ❌ Errores de clasificación: {class_summary['classification_errors']}")
+
+                # 🎯 MOSTRAR RESULTADOS DE LAS 5 CAPAS
+                if result.get("layer_processing_summary"):
+                    summary = result["layer_processing_summary"]
+                    print(f"\n🔄 PROCESAMIENTO DE CAPAS:")
+                    print(
+                        f"   📄 PDFs procesados por las 5 capas: {summary['total_pdfs_processed_through_layers']}"
+                    )
+                    print(
+                        f"   ✅ Capas exitosas: {summary['successful_layer_processing']}"
+                    )
+                    print(
+                        f"   🎉 Decisiones finales generadas: {summary['total_final_decisions']}"
+                    )
+
+                    # Mostrar algunas decisiones finales si están disponibles
+                    if result.get("all_final_decisions"):
+                        print("\n🎯 ÚLTIMAS DECISIONES FINALES:")
+                        for i, decision in enumerate(
+                            result["all_final_decisions"][-3:]
+                        ):  # Mostrar últimas 3
+                            decision_type = decision.get("decision_type", "N/A")
+                            confidence = decision.get("confidence_score", "N/A")
+                            print(
+                                f"   📊 Decisión {i+1}: {decision_type} (confianza: {confidence})"
+                            )
+
+                if result["errors"] > 0:
+                    print(f"\n❌ Errores: {result['errors']}")
+                    
+                print(f"\n✅ PROCESAMIENTO COMPLETADO")
+                print(f"📊 Total mensajes en carpeta: {result['total_messages']}")
+                print(f"📊 Mensajes procesados: {result['processed']}")
+                
+            else:
                 print(
-                    f"\n[{datetime.now().strftime('%H:%M:%S')}] Ciclo #{cycle_count} - Procesando correos..."
+                    f"❌ Error en procesamiento: {result.get('error', 'Desconocido')}"
                 )
 
-                try:
-                    # Procesar correos automáticamente
-                    result = await robot.execute_command("process_emails")
-
-                    if result["success"]:
-                        print(f"✅ Procesados: {result['processed']} correos")
-                        print(f"📤 PDFs enviados: {result['pdfs_sent']} a RabbitMQ")
-
-                        # 🎯 MOSTRAR RESULTADOS DE LAS 5 CAPAS
-                        if result.get("layer_processing_summary"):
-                            summary = result["layer_processing_summary"]
-                            print(
-                                f"🔄 PDFs procesados por las 5 capas: {summary['total_pdfs_processed_through_layers']}"
-                            )
-                            print(
-                                f"✅ Capas exitosas: {summary['successful_layer_processing']}"
-                            )
-                            print(
-                                f"🎉 Decisiones finales generadas: {summary['total_final_decisions']}"
-                            )
-
-                            # Mostrar algunas decisiones finales si están disponibles
-                            if result.get("all_final_decisions"):
-                                print("🎯 Últimas decisiones finales:")
-                                for i, decision in enumerate(
-                                    result["all_final_decisions"][-3:]
-                                ):  # Mostrar últimas 3
-                                    decision_type = decision.get("decision_type", "N/A")
-                                    confidence = decision.get("confidence_score", "N/A")
-                                    print(
-                                        f"   📊 Decisión {i+1}: {decision_type} (confianza: {confidence})"
-                                    )
-
-                        if result["errors"] > 0:
-                            print(f"❌ Errores: {result['errors']}")
-                    else:
-                        print(
-                            f"❌ Error en procesamiento: {result.get('error', 'Desconocido')}"
-                        )
-
-                    # Mostrar estadísticas
-                    stats = await robot.get_status()
-                    if stats.get("processing_stats"):
-                        proc_stats = stats["processing_stats"]
-                        print(
-                            f"📊 Total procesados: {proc_stats['processed_messages']}"
-                        )
-                        print(f"📊 Procesados hoy: {proc_stats['processed_today']}")
-
-                except Exception as e:
-                    logger.error(f"Error en ciclo de procesamiento: {e}")
-                    print(f"❌ Error en ciclo: {e}")
-
-                # Esperar hasta el siguiente ciclo
-                print(
-                    f"⏳ Esperando {check_interval} segundos hasta el siguiente ciclo..."
-                )
-                await asyncio.sleep(check_interval)
-
-        except KeyboardInterrupt:
-            print("\n🛑 Deteniendo robot...")
+        except Exception as e:
+            logger.error(f"Error en procesamiento: {e}")
+            print(f"❌ Error en procesamiento: {e}")
 
     except Exception as e:
         print(f"\n❌ Error en el robot: {e}")

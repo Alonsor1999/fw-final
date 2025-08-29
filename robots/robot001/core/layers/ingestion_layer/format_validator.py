@@ -4,7 +4,6 @@ Format Validator - Componente para validar formatos de documentos
 
 import os
 import hashlib
-import magic
 from typing import Dict, Any, List, Tuple
 from pathlib import Path
 
