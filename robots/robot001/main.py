@@ -5,6 +5,7 @@ Flujo completo: Leer correos → Descargar PDFs → Enviar a RabbitMQ → Proces
 """
 
 import asyncio
+import logging
 import os
 import sys
 import time
@@ -20,11 +21,16 @@ mail_tracking_path = os.path.join(
 )
 sys.path.append(mail_tracking_path)
 
+# Agregar el directorio de Pdf_Consumer al path
+pdf_consumer_path = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "Pdf_Consumer"
+)
+sys.path.append(pdf_consumer_path)
+
 from core.layers.analysis_extraction_layer.analysis_extraction_coordinator import (
     AnalysisExtractionCoordinator,
 )
 from core.layers.decision_layer.decision_coordinator import DecisionCoordinator
-
 # Importar las 5 capas de procesamiento
 from core.layers.ingestion_layer.ingestion_coordinator import IngestionCoordinator
 from core.layers.ingestion_layer.document_classifier import DocumentClassifier
@@ -37,6 +43,17 @@ from core.layers.storage_management_layer.storage_management_coordinator import 
 
 from framework.core.orchestrator import Orchestrator
 from framework.shared.logger import get_logger
+
+# Importar mainExtract del Pdf_Consumer
+try:
+    import mainExtract
+    PDF_CONSUMER_AVAILABLE = True
+    logger_temp = logging.getLogger(__name__)
+    logger_temp.info("✅ Módulo mainExtract importado correctamente")
+except ImportError as e:
+    PDF_CONSUMER_AVAILABLE = False
+    logger_temp = logging.getLogger(__name__)
+    logger_temp.warning(f"⚠️ No se pudo importar mainExtract: {e}")
 
 logger = get_logger(__name__)
 
@@ -383,8 +400,6 @@ class Robot001:
             processed_count = 0
             pdfs_sent = 0
             errors = 0
-            total_layer_results = []
-            total_final_decisions = []
 
             for message in messages:
                 try:
@@ -412,14 +427,6 @@ class Robot001:
                         pdfs_sent += result["pdfs_sent"]
                         self.processed_messages.add(message_id)
 
-                        # 🎯 Recopilar resultados de las 5 capas
-                        if "layer_processing_results" in result:
-                            total_layer_results.extend(
-                                result["layer_processing_results"]
-                            )
-                        if "final_decisions" in result:
-                            total_final_decisions.extend(result["final_decisions"])
-
                         # 🎯 Mostrar información de clasificación
                         if result.get("email_classification"):
                             classification = result["email_classification"]
@@ -434,18 +441,8 @@ class Robot001:
                                 f"✅ Mensaje procesado: {message.get('subject', 'Sin asunto')}"
                             )
 
-                        # Log información de las capas si están disponibles
-                        if result.get("final_decisions"):
-                            successful_layers = len(
-                                [
-                                    r
-                                    for r in result["final_decisions"]
-                                    if r.get("success")
-                                ]
-                            )
-                            logger.info(
-                                f"🎯 Capas procesadas exitosamente: {successful_layers}/{len(result.get('layer_processing_results', []))}"
-                            )
+                        # Log información del procesamiento
+                        logger.info(f"📤 PDFs enviados a Pdf_Consumer: {result['pdfs_sent']}/{result['pdfs_downloaded']}")
                     else:
                         errors += 1
                         logger.error(f"❌ Error procesando mensaje: {result['error']}")
@@ -455,37 +452,8 @@ class Robot001:
                     logger.error(f"❌ Error procesando mensaje: {e}")
 
             logger.info(
-                f"📊 Procesamiento completado: {processed_count} procesados, {pdfs_sent} PDFs enviados, {errors} errores"
+                f"📊 Procesamiento completado: {processed_count} procesados, {pdfs_sent} PDFs enviados a Pdf_Consumer, {errors} errores"
             )
-
-            # Estadísticas de las 5 capas
-            successful_layer_processing = len(
-                [r for r in total_layer_results if r.get("success", False)]
-            )
-            total_layer_processing = len(total_layer_results)
-
-            if total_layer_processing > 0:
-                logger.info(
-                    f"🎯 Capas de procesamiento: {successful_layer_processing}/{total_layer_processing} exitosas"
-                )
-                logger.info(
-                    f"🎉 Decisiones finales generadas: {len(total_final_decisions)}"
-                )
-
-            # 🎯 Estadísticas de clasificación de correos
-            classification_stats = {
-                'ruta_a': 0,
-                'ruta_b': 0,
-                'ruta_c': 0,
-                'no_classified': 0,
-                'error': 0
-            }
-            
-            for result in total_layer_results:
-                if result.get("email_classification"):
-                    route = result["email_classification"].get("primary_route", "no_classified")
-                    if route in classification_stats:
-                        classification_stats[route] += 1
 
             return {
                 "success": True,
@@ -493,26 +461,12 @@ class Robot001:
                 "pdfs_sent": pdfs_sent,
                 "errors": errors,
                 "total_messages": len(messages),
-                # 🎯 ESTADÍSTICAS DE CLASIFICACIÓN
-                "email_classification_summary": {
-                    "total_emails_classified": processed_count,
-                    "classification_breakdown": classification_stats,
-                    "ruta_a_count": classification_stats['ruta_a'],
-                    "ruta_b_count": classification_stats['ruta_b'],
-                    "ruta_c_count": classification_stats['ruta_c'],
-                    "unclassified_count": classification_stats['no_classified'],
-                    "classification_errors": classification_stats['error']
-                },
-                # 🎉 RESULTADOS DE LAS 5 CAPAS
-                "layer_processing_summary": {
-                    "total_pdfs_processed_through_layers": total_layer_processing,
-                    "successful_layer_processing": successful_layer_processing,
-                    "failed_layer_processing": total_layer_processing
-                    - successful_layer_processing,
-                    "total_final_decisions": len(total_final_decisions),
-                },
-                "all_layer_results": total_layer_results,
-                "all_final_decisions": total_final_decisions,
+                # 📤 PROCESAMIENTO SIMPLIFICADO
+                "processing_summary": {
+                    "method": "rabbitmq_pdf_consumer",
+                    "pdfs_sent_to_consumer": pdfs_sent,
+                    "message": f"PDFs enviados al Pdf_Consumer para extracción de texto y datos"
+                }
             }
 
         except Exception as e:
@@ -565,37 +519,28 @@ class Robot001:
             logger.info(f"📄 Adjuntos descargados: {len(all_attachments_downloaded)} archivos")
             logger.info(f"📄 PDFs para procesamiento: {len(pdfs_downloaded)} archivos")
 
-            # Enviar PDFs a RabbitMQ y procesar a través de las 5 capas
+            # 📤 Enviar TODOS los PDFs en UN SOLO mensaje a RabbitMQ
             pdfs_sent = 0
-            layer_processing_results = []
-
-            for pdf_path in pdfs_downloaded:
-                # 🔍 VERIFICAR QUE EL ARCHIVO EXISTE Y NO ESTÁ VACÍO
-                if not self._verify_pdf_file(pdf_path):
-                    logger.error(f"❌ PDF inválido o vacío: {pdf_path}")
-                    continue
-
-                # 📤 PASO 1: Enviar a RabbitMQ con formato corregido
-                if self._send_pdf_to_rabbitmq(pdf_path, email_info):
-                    pdfs_sent += 1
-                    logger.info(f"📤 PDF enviado a RabbitMQ: {pdf_path}")
-
-                    # 🔄 PASO 2: Procesar a través de las 5 capas (NUEVA FUNCIONALIDAD)
-                    layer_result = await self._process_pdf_through_layers(
-                        pdf_path, email_info
-                    )
-                    layer_processing_results.append(layer_result)
-
-                    if layer_result.get("success", False):
-                        logger.info(
-                            f"🎯 PDF procesado exitosamente a través de las 5 capas: {pdf_path}"
-                        )
+            
+            if pdfs_downloaded:
+                # 🔍 VERIFICAR Y FILTRAR PDFs VÁLIDOS
+                valid_pdfs = []
+                for pdf_path in pdfs_downloaded:
+                    if self._verify_pdf_file(pdf_path):
+                        valid_pdfs.append(pdf_path)
+                        logger.info(f"✅ PDF válido: {pdf_path}")
                     else:
-                        logger.warning(
-                            f"⚠️ Error procesando PDF a través de las capas: {layer_result.get('error', 'Desconocido')}"
-                        )
+                        logger.error(f"❌ PDF inválido descartado: {pdf_path}")
+                
+                # 📤 Enviar TODOS los PDFs válidos en UN SOLO mensaje
+                if valid_pdfs:
+                    if self._send_multiple_pdfs_to_rabbitmq(valid_pdfs, email_info):
+                        pdfs_sent = len(valid_pdfs)
+                        logger.info(f"📤 {pdfs_sent} PDFs enviados en UN SOLO mensaje a RabbitMQ")
+                    else:
+                        logger.error(f"❌ Error enviando PDFs a RabbitMQ")
                 else:
-                    logger.error(f"❌ Error enviando PDF a RabbitMQ: {pdf_path}")
+                    logger.warning("⚠️ No hay PDFs válidos para enviar")
 
             # Enviar resumen del correo
             self.rabbitmq_sender.send_email_summary(
@@ -614,13 +559,9 @@ class Robot001:
                 "all_attachments_downloaded": len(all_attachments_downloaded),
                 # 🎯 INFORMACIÓN DE CLASIFICACIÓN DEL CORREO
                 "email_classification": classification_result,
-                # 🎉 RESULTADO DE LAS 5 CAPAS - DECISIÓN FINAL DE LA ÚLTIMA CAPA
-                "layer_processing_results": layer_processing_results,
-                "final_decisions": [
-                    result.get("final_decision_result", {})
-                    for result in layer_processing_results
-                    if result.get("success", False)
-                ],
+                # 📤 PROCESAMIENTO SIMPLIFICADO - Solo envío a RabbitMQ
+                "processing_method": "rabbitmq_pdf_consumer",
+                "message": f"PDFs enviados a Pdf_Consumer para procesamiento: {pdfs_sent}/{len(pdfs_downloaded)}"
             }
 
         except Exception as e:
@@ -762,8 +703,52 @@ class Robot001:
             logger.error(f"❌ Error verificando PDF: {pdf_path} - {e}")
             return False
 
+    def _send_multiple_pdfs_to_rabbitmq(self, pdf_paths: List[str], email_info: Dict) -> bool:
+        """Enviar MÚLTIPLES PDFs en UN SOLO mensaje a RabbitMQ"""
+        try:
+            import uuid
+            from pathlib import Path
+            
+            # Generar GUID único para todo el correo
+            guid = str(uuid.uuid4())
+            
+            # 🎯 EXTRAER INFORMACIÓN DE CLASIFICACIÓN
+            classification = email_info.get("classification", {})
+            primary_route = classification.get("primary_route_name", "No clasificado")
+            
+            # 📁 CONVERTIR TODAS las rutas a absolutas
+            pdf_list = []
+            for pdf_path in pdf_paths:
+                file_path = Path(pdf_path)
+                absolute_path = str(file_path.absolute())
+                pdf_list.append(absolute_path)
+            
+            # Crear mensaje con LISTA de PDFs - solo 3 propiedades
+            message = {
+                "guid": guid,
+                "local_paths": pdf_list,  # 📋 LISTA de rutas de PDFs
+                "primary_route_name": primary_route
+            }
+            
+            # Enviar usando el método original pero con nuestro mensaje personalizado
+            rabbitmq_success = self._send_custom_message_to_rabbitmq(message)
+            
+            # 🔥 LLAMAR DIRECTAMENTE A mainExtract.py después de RabbitMQ
+            if rabbitmq_success:
+                extract_success = self._call_mainextract_directly(message)
+                if extract_success:
+                    logger.info(f"✅ {len(pdf_list)} PDFs procesados por mainExtract")
+                else:
+                    logger.error(f"❌ Error procesando PDFs en mainExtract")
+            
+            return rabbitmq_success
+            
+        except Exception as e:
+            logger.error(f"❌ Error preparando mensaje múltiple para RabbitMQ: {e}")
+            return False
+
     def _send_pdf_to_rabbitmq(self, pdf_path: str, email_info: Dict) -> bool:
-        """Enviar PDF a RabbitMQ - SOLO ruta local y GUID"""
+        """Enviar PDF a RabbitMQ con clasificación y rutas A, B, C"""
         try:
             import uuid
             from pathlib import Path
@@ -775,14 +760,29 @@ class Robot001:
             file_path = Path(pdf_path)
             absolute_path = str(file_path.absolute())
             
-            # Crear mensaje SIMPLIFICADO - solo ruta y GUID
+            # 🎯 EXTRAER INFORMACIÓN DE CLASIFICACIÓN
+            classification = email_info.get("classification", {})
+            primary_route = classification.get("primary_route_name", "No clasificado")
+            
+            # Crear mensaje SIMPLIFICADO - solo 3 propiedades
             message = {
                 "guid": guid,
-                "local_path": absolute_path
+                "local_path": absolute_path,
+                "primary_route_name": primary_route
             }
             
             # Enviar usando el método original pero con nuestro mensaje personalizado
-            return self._send_custom_message_to_rabbitmq(message)
+            rabbitmq_success = self._send_custom_message_to_rabbitmq(message)
+            
+            # 🔥 LLAMAR DIRECTAMENTE A mainExtract.py después de RabbitMQ
+            if rabbitmq_success:
+                extract_success = self._call_mainextract_directly(message)
+                if extract_success:
+                    logger.info(f"✅ PDF procesado por mainExtract: {absolute_path}")
+                else:
+                    logger.error(f"❌ Error procesando PDF en mainExtract: {absolute_path}")
+            
+            return rabbitmq_success
             
         except Exception as e:
             logger.error(f"❌ Error preparando mensaje para RabbitMQ: {e}")
@@ -811,8 +811,27 @@ class Robot001:
                 )
             )
             
-            logger.info(f"✅ Ruta y GUID enviados a RabbitMQ: {message.get('guid', 'N/A')} -> {message.get('local_path', 'N/A')}")
-            logger.debug(f"Mensaje simplificado: {message}")
+            # 🎯 LOGS SIMPLIFICADOS
+            route = message.get('primary_route_name', 'N/A')
+            
+            # Detectar si es un solo PDF o múltiples PDFs
+            if 'local_paths' in message:
+                # Múltiples PDFs
+                pdf_count = len(message.get('local_paths', []))
+                logger.info(f"✅ {pdf_count} PDFs enviados en UN SOLO mensaje a RabbitMQ:")
+                logger.info(f"   📁 GUID: {message.get('guid', 'N/A')}")
+                logger.info(f"   📄 local_paths: {pdf_count} archivos")
+                for i, path in enumerate(message.get('local_paths', []), 1):
+                    logger.info(f"      {i}. {path}")
+                logger.info(f"   🎯 primary_route_name: {route}")
+            else:
+                # Un solo PDF (método anterior)
+                logger.info(f"✅ PDF enviado a RabbitMQ (3 propiedades):")
+                logger.info(f"   📁 GUID: {message.get('guid', 'N/A')}")
+                logger.info(f"   📄 local_path: {message.get('local_path', 'N/A')}")
+                logger.info(f"   🎯 primary_route_name: {route}")
+            
+            logger.debug(f"Mensaje JSON: {message}")
             
             return True
             
@@ -820,162 +839,74 @@ class Robot001:
             logger.error(f"❌ Error enviando mensaje personalizado a RabbitMQ: {e}")
             return False
 
-    async def _process_pdf_through_layers(
-        self, pdf_path: str, email_info: Dict[str, Any]
-    ) -> Dict[str, Any]:
-        """
-        Procesa un PDF a través de las 5 capas secuencialmente
-
-        Args:
-            pdf_path: Ruta del archivo PDF
-            email_info: Información del correo electrónico
-
-        Returns:
-            Dict con el resultado de la última capa (Decision Layer)
-        """
+    def _call_mainextract_directly(self, message: Dict) -> bool:
+        """Llamar directamente al mainExtract.py con el mensaje JSON"""
         try:
-            logger.info(f"🔄 Procesando PDF a través de las 5 capas: {pdf_path}")
-            start_time = time.time()
-
-            # 🔸 CAPA 1: Ingesta (Clasificar, validar, escanear)
-            logger.info("📥 Capa 1: Procesando Ingesta...")
-            ingestion_result = self.ingestion_coordinator.process_document(pdf_path)
-            if not ingestion_result.get("success", False):
-                return {
-                    "success": False,
-                    "error": f"Error en Capa de Ingesta: {ingestion_result.get('error', 'Desconocido')}",
-                    "failed_layer": "ingestion",
-                    "pdf_path": pdf_path,
-                }
-
-            # 🔸 CAPA 2: Procesamiento Especializado (PDFs específicamente)
-            logger.info("🔧 Capa 2: Procesando Especializado...")
-            specialized_result = self.specialized_coordinator.process_document(pdf_path)
-            if not specialized_result.get("success", False):
-                return {
-                    "success": False,
-                    "error": f"Error en Capa de Procesamiento Especializado: {specialized_result.get('error', 'Desconocido')}",
-                    "failed_layer": "specialized_processing",
-                    "pdf_path": pdf_path,
-                }
-
-            # 🔸 CAPA 3: Análisis y Extracción (Extraer datos, analizar contenido)
-            logger.info("🔍 Capa 3: Procesando Análisis y Extracción...")
-            # Preparar contenido procesado para la capa de análisis
-            processed_content = {
-                "file_path": pdf_path,
-                "ingestion_result": ingestion_result,
-                "specialized_result": specialized_result,
-                "document_type": "pdf",
-                # 🔧 AGREGAR FORMATO ESPERADO POR EL DATA_EXTRACTOR
-                "text_content": {
-                    "full_text": f"PDF procesado: {pdf_path}",
-                    "extracted_text": f"Contenido del PDF: {pdf_path}"
-                },
-                "body_content": {
-                    "text_body": f"PDF procesado: {pdf_path}",
-                    "html_body": f"<p>Contenido del PDF: {pdf_path}</p>"
-                },
-                "headers": {
-                    "subject": "PDF Processing",
-                    "content_type": "application/pdf"
-                }
-            }
-            analysis_result = self.analysis_coordinator.process_document(processed_content, "pdf")
-            if not analysis_result.get("success", False):
-                return {
-                    "success": False,
-                    "error": f"Error en Capa de Análisis y Extracción: {analysis_result.get('error', 'Desconocido')}",
-                    "failed_layer": "analysis_extraction",
-                    "pdf_path": pdf_path,
-                }
-
-            # 🔸 CAPA 4: Almacenamiento y Gestión (Storage, índices, cache)
-            logger.info("💾 Capa 4: Procesando Almacenamiento...")
-            # Preparar datos para almacenamiento
-            storage_data = {
-                "file_path": pdf_path,
-                "ingestion_result": ingestion_result,
-                "specialized_result": specialized_result,
-                "analysis_result": analysis_result,
-                "document_type": "pdf"
-            }
-            storage_result = self.storage_coordinator.store_document_complete(
-                storage_data, "pdf", os.path.basename(pdf_path)
-            )
-            if not storage_result.get("success", False):
-                return {
-                    "success": False,
-                    "error": f"Error en Capa de Almacenamiento: {storage_result.get('error', 'Desconocido')}",
-                    "failed_layer": "storage_management",
-                    "pdf_path": pdf_path,
-                }
-
-            # 🔸 CAPA 5: Decisión (Local, AWS, híbrido, manual) - LA ÚLTIMA CAPA
-            logger.info("🎯 Capa 5: Procesando Decisión...")
-            # Preparar datos para decisión
-            decision_data = {
-                "analysis_data": analysis_result.get("extracted_data", {}),
-                "confidence_score": 0.75  # Valor por defecto
-            }
-            decision_result = self.decision_coordinator.make_decision(
-                decision_data["analysis_data"], 
-                decision_data["confidence_score"]
-            )
-
-            # Calcular tiempo total de procesamiento
-            total_time = time.time() - start_time
-
-            # ✅ RESULTADO FINAL - Devolver el resultado de la Decision Layer
-            final_result = {
-                "success": decision_result.get("success", False),
-                "pdf_path": pdf_path,
-                "email_info": email_info,
-                "processing_summary": {
-                    "total_processing_time": total_time,
-                    "layers_processed": 5,
-                    "final_decision": decision_result,
-                },
-                # 🎉 RESULTADO DE LA ÚLTIMA CAPA (Decision Layer)
-                "final_decision_result": decision_result,
-            }
-
-            if decision_result.get("success", False):
-                logger.info(
-                    f"✅ PDF procesado exitosamente a través de las 5 capas: {pdf_path}"
-                )
-                logger.info(
-                    f"🎯 Decisión final: {decision_result.get('decision_type', 'N/A')} con confianza {decision_result.get('confidence_score', 'N/A')}"
-                )
-                
-                # 📊 MOSTRAR RESULTADOS DETALLADOS DE CADA CAPA
-                logger.info("📊 RESULTADOS DETALLADOS DE LAS 5 CAPAS:")
-                logger.info(f"   📥 Capa 1 (Ingesta): {ingestion_result.get('document_type', 'N/A')}")
-                logger.info(f"   🔧 Capa 2 (Especializado): {specialized_result.get('processing_type', 'N/A')}")
-                logger.info(f"   🔍 Capa 3 (Análisis): {analysis_result.get('extraction_type', 'N/A')}")
-                logger.info(f"   💾 Capa 4 (Almacenamiento): {storage_result.get('storage_type', 'N/A')}")
-                logger.info(f"   🎯 Capa 5 (Decisión): {decision_result.get('decision_type', 'N/A')}")
-                
+            if not PDF_CONSUMER_AVAILABLE:
+                logger.warning("⚠️ mainExtract no está disponible")
+                return False
+            
+            import json
+            import sys
+            from io import StringIO
+            
+            # Preparar mensaje JSON para mainExtract
+            # mainExtract espera: {"local_path": "ruta", "guid": "guid"}
+            message_json = json.dumps(message, ensure_ascii=False)
+            
+            # 🎯 MOSTRAR INFORMACIÓN SIMPLIFICADA
+            route = message.get('primary_route_name', 'N/A')
+            
+            # Detectar si es un solo PDF o múltiples PDFs
+            if 'local_paths' in message:
+                # Múltiples PDFs
+                pdf_count = len(message.get('local_paths', []))
+                logger.info(f"📤 Llamando mainExtract con {pdf_count} PDFs:")
+                logger.info(f"   📁 GUID: {message.get('guid', 'N/A')}")
+                logger.info(f"   📄 local_paths: {pdf_count} archivos")
+                logger.info(f"   🎯 primary_route_name: {route}")
             else:
-                logger.error(
-                    f"❌ Error en Capa de Decisión: {decision_result.get('error', 'Desconocido')}"
-                )
-                final_result["success"] = False
-                final_result["error"] = (
-                    f"Error en Capa de Decisión: {decision_result.get('error', 'Desconocido')}"
-                )
-                final_result["failed_layer"] = "decision"
-
-            return final_result
-
+                # Un solo PDF (método anterior)
+                logger.info(f"📤 Llamando mainExtract (3 propiedades):")
+                logger.info(f"   📁 GUID: {message.get('guid', 'N/A')}")
+                logger.info(f"   📄 local_path: {message.get('local_path', 'N/A')}")
+                logger.info(f"   🎯 primary_route_name: {route}")
+            
+            logger.debug(f"Mensaje JSON: {message_json}")
+            
+            # Capturar stdout original
+            original_stdout = sys.stdout
+            captured_output = StringIO()
+            
+            try:
+                # Redirigir stdout para capturar la salida de mainExtract
+                sys.stdout = captured_output
+                
+                # Simular llamada con argumentos de línea de comandos
+                original_argv = sys.argv.copy()
+                sys.argv = ["mainExtract.py", message_json]
+                
+                # Llamar directamente a la función main de mainExtract
+                mainExtract.main()
+                
+                # Restaurar argv original
+                sys.argv = original_argv
+                
+                # Obtener la salida capturada
+                output = captured_output.getvalue()
+                if output:
+                    logger.info(f"📄 Salida de mainExtract: {output.strip()}")
+                
+                logger.info(f"✅ mainExtract ejecutado exitosamente para {message.get('local_path', 'N/A')}")
+                return True
+                
+            finally:
+                # Restaurar stdout original
+                sys.stdout = original_stdout
+                
         except Exception as e:
-            logger.error(f"❌ Error crítico procesando PDF a través de las capas: {e}")
-            return {
-                "success": False,
-                "error": f"Error crítico: {str(e)}",
-                "failed_layer": "critical_error",
-                "pdf_path": pdf_path,
-            }
+            logger.error(f"❌ Error ejecutando mainExtract: {e}")
+            return False
 
 
 async def main():
@@ -983,7 +914,7 @@ async def main():
     print("=" * 60)
     print("ROBOT001 - PROCESADOR DE OUTLOOK PARA INICIATIVA4")
     print(
-        "FLUJO COMPLETO: CORREOS → PDFs → RABBITMQ → 5 CAPAS DE PROCESAMIENTO → DECISIÓN FINAL"
+        "FLUJO SIMPLIFICADO: CORREOS → PDFs → RABBITMQ → PDF_CONSUMER → EXTRACCIÓN DE DATOS"
     )
     print("=" * 60)
     print(f"Iniciando: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")

@@ -1,7 +1,8 @@
 """
 Procesador de documentos PDF
 """
-import fitz  # PyMuPDF
+import pdfplumber
+import io
 import logging
 
 logger = logging.getLogger(__name__)
@@ -24,16 +25,18 @@ class DocumentProcessor:
             str: Texto extraído del PDF, None si hay error
         """
         try:
-            # Abrir el PDF desde bytes
-            doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+            # Crear un stream de bytes
+            pdf_stream = io.BytesIO(pdf_bytes)
             text_content = ""
 
-            # Extraer texto de cada página
-            for page_num in range(len(doc)):
-                page = doc.load_page(page_num)
-                text_content += page.get_text()
+            # Abrir el PDF con pdfplumber
+            with pdfplumber.open(pdf_stream) as pdf:
+                # Extraer texto de cada página
+                for page in pdf.pages:
+                    page_text = page.extract_text()
+                    if page_text:
+                        text_content += page_text + "\n"
 
-            doc.close()
             return text_content.strip() if text_content.strip() else None
 
         except Exception as e:
@@ -101,19 +104,24 @@ class DocumentProcessor:
             if not pdf_bytes:
                 return []
 
-            # Abrir el PDF desde bytes
-            doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+            # Crear un stream de bytes
+            pdf_stream = io.BytesIO(pdf_bytes)
             pages_with_numbers = []
 
-            # Extraer texto de cada página con su número
-            for page_num in range(len(doc)):
-                page = doc.load_page(page_num)
-                page_text = page.get_text().strip()
-                # Los extractores esperan tuplas (page_text, page_number)
-                # page_number empieza en 1, no en 0
-                pages_with_numbers.append((page_text if page_text else "", page_num + 1))
+            # Abrir el PDF con pdfplumber
+            with pdfplumber.open(pdf_stream) as pdf:
+                # Extraer texto de cada página con su número
+                for page_num, page in enumerate(pdf.pages):
+                    page_text = page.extract_text()
+                    if page_text:
+                        page_text = page_text.strip()
+                    else:
+                        page_text = ""
+                    
+                    # Los extractores esperan tuplas (page_text, page_number)
+                    # page_number empieza en 1, no en 0
+                    pages_with_numbers.append((page_text, page_num + 1))
 
-            doc.close()
             return pages_with_numbers
 
         except Exception as e:
@@ -134,9 +142,14 @@ class DocumentProcessor:
             if not pdf_bytes:
                 return False
 
-            doc = fitz.open(stream=pdf_bytes, filetype="pdf")
-            doc.close()
-            return True
+            # Crear un stream de bytes
+            pdf_stream = io.BytesIO(pdf_bytes)
+            
+            # Intentar abrir el PDF con pdfplumber
+            with pdfplumber.open(pdf_stream) as pdf:
+                # Si se puede abrir y tiene al menos una página, es válido
+                return len(pdf.pages) > 0
+                
         except Exception as e:
             self.logger.error(f"PDF inválido: {str(e)}")
             return False
